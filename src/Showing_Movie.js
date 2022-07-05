@@ -1,28 +1,35 @@
 // import app from './app.scss'
 import App from './App.css'
+import movies from './movies.css'
 
 function Showing_Movie(props) {
   return (
     <>
-      <div className="col-lg-4 mb-4 img_gallery">
-        <div className="card">
-          <img
-            src={props.movie.Poster}
-            alt="movie_image"
-            className="card-img-top"
-          />
-          <div className="card-body" >
-            <h5 className="card-title">{props.movie.Title}</h5>
-            <p className="card-text"></p>
-            <a href="" className="btn btn-outline-success btn-sm">
-              Read More
-            </a>
-            <a href="" className="btn btn-outline-danger btn-sm">
-              <i className="far fa-heart"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+      
+
+<div className="col-md-3">
+                <div className="card-sl">
+                    <div className="card-image">
+                        <img
+                            src={props.movie.Poster}/>
+                    </div>
+
+                    <a className="card-action" href="#"><i className="fa fa-heart"></i></a>
+                    <div className="card-heading">
+                        {props.movie.Title}
+                    </div>
+                    
+                    <div className="card-text">
+                        
+                    </div>
+                    <a href="#" className="card-button"> More</a>
+                </div>
+            </div>
+
+
+
+
+	
     </>
   );
 }

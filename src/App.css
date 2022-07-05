@@ -63,15 +63,15 @@
 
 /* code for card section  */
 .img_gallery{
-  height: 600px;
+  height: 300px;
 }
 
 img{
-  height: 400px;
+  height: 200px;
 }
 
 .card-body{
-  height: 200px;
+  height: 100px;
 }
 
 
