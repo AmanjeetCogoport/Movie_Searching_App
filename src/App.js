@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import Showing_Movie from './Showing_Movie';
+import Search from './Search'
+import { useEffect, useState } from 'react';
+
+
 
 function App() {
+  
+  let url = encodeURI("http://www.omdbapi.com/?s=love&apikey=fd57d86");
+
+  const [movieSearchedList, setMovieSearchedList] = useState([]);
+  let outputValue;
+  
+
+  useEffect( () => {
+    fetch(url).then( (response) => response.json()).then( (data) => data.Search).then( (search) => {
+      setMovieSearchedList(search);
+    })
+  },[])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <>
+      <Search />
+    
+
+      {/* show movie section will start from here  */}
+      <section id="gallery">
+        <div className="container">
+          <div className="row">
+
+            {movieSearchedList.length > 0 && movieSearchedList.map( (movie) => <Showing_Movie movie={movie}/>)}
+    
+          </div>
+        </div>
+      </section>
+
+    </>
   );
 }
 
