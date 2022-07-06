@@ -16,13 +16,15 @@ function Showing_Movie(props) {
 
                     <a className="card-action" href="#"><i className="fa fa-heart"></i></a>
                     <div className="card-heading">
-                        {props.movie.Title}
+                        {props.movie.Genre}
                     </div>
                     
                     <div className="card-text">
-                        
+                        <span>{props.movie.Genre}</span>
                     </div>
-                    <a href="#" className="card-button"> More</a>
+
+                    <a href="#" id={props.movie.imdbID} className="card-button" onClick={(event) => props.movieDetail(event.target.id)}> More</a>
+
                 </div>
             </div>
 

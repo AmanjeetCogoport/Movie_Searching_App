@@ -36,11 +36,15 @@ function App() {
     console.log("ram");
   }
 
+  let ListTheMovie = (movieId) => {
+    console.log(movieId);
+  }
+
 
   return (
 
     <>
-      <Search updateParent={(val) => updateAppformSearch(val)}/>
+      <Search updateParent={(val) => updateAppformSearch(val)} />
     
 
       {/* show movie section will start from here  */}
@@ -48,7 +52,9 @@ function App() {
         <div className="container">
           <div className="row">
             {/* {alert(movieSearchedList)} */}
-            {movieSearchedList.length > 2 && movieSearchedList.map( (movie) => <Showing_Movie movie={movie}/>)}
+            {movieSearchedList.length > 2 && movieSearchedList.map( (movie) => <Showing_Movie movieDetail={
+        (movieId) => ListTheMovie(movieId)
+      } movie={movie}/>)}
     
           </div>
         </div>
