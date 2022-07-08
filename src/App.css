@@ -87,12 +87,13 @@ img{
 
 .detail-movie-list{
   background-color: rgb(232, 232, 241);
+  word-wrap: wrap;
 }
 
-.detail-movie-list p{
-  width: 400px;
+.detail-movie-list h5,h2,h3,h4{
+  max-width: 550px;
   /* font-weight: b; */
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 

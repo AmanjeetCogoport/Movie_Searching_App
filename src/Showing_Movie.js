@@ -1,4 +1,5 @@
 // import app from './app.scss'
+import { Link } from 'react-router-dom';
 import App from './App.css'
 import movies from './movies.css'
 
@@ -23,7 +24,9 @@ function Showing_Movie(props) {
                         <span>{props.movie.Genre}</span>
                     </div>
 
-                    <a href="#" id={props.movie.imdbID} className="card-button" onClick={(event) => props.movieDetail(event.target.id)}> More</a>
+                    <Link to={`/${props.movie.imdbID}`} id={props.movie.imdbID} className="card-button"> View More</Link>
+
+                    {/* onClick={(event) => props.movieDetail(event.target.id)} */}
 
                 </div>
             </div>
