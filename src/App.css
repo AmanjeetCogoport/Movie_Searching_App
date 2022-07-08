@@ -75,6 +75,27 @@ img{
 }
 
 
+#mainImg{
+  width: 400px;
+  height: 650px;
+}
+
+#heading-h{
+  text-align: center;
+  font-size: 40px;
+}
+
+.detail-movie-list{
+  background-color: rgb(232, 232, 241);
+}
+
+.detail-movie-list p{
+  width: 400px;
+  /* font-weight: b; */
+  font-size: 20px;
+}
+
+
 
 
 
